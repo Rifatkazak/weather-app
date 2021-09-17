@@ -1,7 +1,7 @@
 export const locations = [
     {name:"istanbul",
-    lat:41.015137,
-    lon:28.979530,
+     loca : {lat:41.015137,
+     lon:28.979530}
     },
     {name:"ankara",
     lat:39.925533,

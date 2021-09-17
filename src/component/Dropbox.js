@@ -1,17 +1,20 @@
 import React from 'react';
-import {useContext} from "react"
+import {useContext,} from "react"
 import WeatherContext from '../context/WeatherContext';
 
 function Dropbox() {
 
-    const {locations} = useContext(WeatherContext) 
+    const {locations, latLonChange} = useContext(WeatherContext) 
+
+   
 
     return (
         <div>
-            <select style={{width:"300px"}} name="location" id="location">
+            <select style={{width:"300px"}}  id="location" onChange={(e) => latLonChange(e.target.value)}>
                 {locations.map((item,index) =>
-                 <option key={index} value ={item.name} >
+                 <option key={index} value={item.loca} name = {item.name}   >
                             {item.name}
+    
                         </option>
                 )}
             </select>
