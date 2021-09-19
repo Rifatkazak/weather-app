@@ -28,7 +28,8 @@ export const WeatherProvider= ({children})=>{
                 min : df.temp.min,
                 max :  df.temp.max,
                 weather : df.weather[0].description,
-                icon:df.weather[0].icon
+                icon:df.weather[0].icon,
+                date : df.dt
             }
         })))
         

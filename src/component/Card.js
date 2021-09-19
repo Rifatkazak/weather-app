@@ -4,16 +4,21 @@ import styles from "../styles.module.css"
 
 function Card() {
     
-    const {locations, daily} = useContext(WeatherContext)
+    const { daily} = useContext(WeatherContext)
     
-
+    const getTime = (time) => {
+        var myDate = new Date( time *1000)
+        console.log(myDate.toGMTString())
+        return myDate.toGMTString().slice(0,16)
+    }
     return (
         <div className = {styles.card}>
            {daily.map((i,index) => (
-               <div key={index} className={styles.day}>
-                   <div><img src={`http://openweathermap.org/img/w/${i.icon}.png`} /></div>
+               <div key={index} className={styles.day} >
+                   <div>{getTime(i.date)}</div>
+                   <div><img src={`http://openweathermap.org/img/w/${i.icon}.png`} alt={i.weather}/></div>
                    <div>{i.weather}</div>
-                   <div>{i.max}F/{i.min}F</div>
+                   <div>{Math.floor(i.max - 273.15)}°C / {Math.floor(i.min - 273.15)}°C</div>
                </div>
            ))}
         </div>
