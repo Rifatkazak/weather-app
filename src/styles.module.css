@@ -1,15 +1,35 @@
+body{
+  background-image: url("./assets/clouds_HD.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* *{
+  border: 1px solid black;
+} */
+.header{
+  color:white;
+  margin : 130px  auto  0px  212px ;
+  font-size: 2.5rem;
+}
+
 .card {
   display : flex ;
-  margin : 30px  auto  auto  200px ;
+  margin : 10px  auto  auto  200px ;
+  width : 69%;
+  height: 10%;
+  
  
 }
 .dropbox  {
-  margin : 100px  auto  auto  212px ;
-  font-size: 2rem;
+  font-size: 1rem;
+  width:60% ;
+  
 }
 .option {
-  font-size: 2rem;
+  font-size: 1rem;
+  padding:1rem;
 }
+
 .day {
   text-align: center;
   margin : 10px ;
@@ -17,4 +37,23 @@
   border-radius: 5px;
   padding: 12px;
   box-shadow: 0px 0px 3px black;
+}
+.addform {
+  display: flex;
+  margin : 100px  auto  auto  212px ;
+  font-size: 1rem;
+
+}
+.addcontainer {
+  margin-right: 250px;
+  font-size: 1rem;
+  width: 40%;
+}
+.addbtn {
+  padding: 1rem;
+  width: 20%;
+}
+.addinput {
+  padding: 1rem;
+  width: 45%;
 }
