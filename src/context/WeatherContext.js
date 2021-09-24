@@ -18,14 +18,10 @@ export const WeatherProvider= ({children})=>{
     
     
      const addCity =(e) => {
-         e.preventDefault()
-         console.log(add)   
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${add}&appid=${api_key}`)
-        .then(res => setLat(res.data.coord))
-        // .then(res => setLocation([...location, {name : `${add}`, lat:[`${res.coord.lat},${res.data.coord.lon}`]}]))
-        console.log(lati)
-        setLocation([...locations, {name : `${add}`, lat:[`${lati.lat}`, `${lati.lon}`]}])
-        console.log(location)
+         e.preventDefault()  
+         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${add}&appid=${api_key}`)
+         .then(res => setLat(res.data.coord))
+         setLocation([...locations, {name : `${add}`, lat:[`${lati.lat}`, `${lati.lon}`]}])  
     };
 
     const values = {location,setLoca,daily,setAdd, add,addCity}

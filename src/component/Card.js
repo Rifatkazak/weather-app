@@ -8,7 +8,6 @@ function Card() {
     
     const getTime = (time) => {
         var myDate = new Date( time *1000)
-        console.log(myDate.toGMTString())
         return myDate.toGMTString().slice(0,16)
     }
     return (
